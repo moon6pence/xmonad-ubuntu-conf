@@ -40,11 +40,13 @@ import Data.Ratio ((%))
   simpler parts of xmonad's behavior and are straightforward to tweak.
 -}
 
-myModMask            = mod4Mask       -- changes the mod key to "super"
+--myModMask            = mod4Mask       -- changes the mod key to "super"
+myModMask            = mod1Mask       -- changes the mod key to "super"
 myFocusedBorderColor = "#ff0000"      -- color of focused border
 myNormalBorderColor  = "#cccccc"      -- color of inactive border
 myBorderWidth        = 1              -- width of border around windows
-myTerminal           = "terminator"   -- which terminal software to use
+--myTerminal           = "terminator"   -- which terminal software to use
+myTerminal           = "gnome-terminal"   -- which terminal software to use
 myIMRosterTitle      = "Buddy List"   -- title of roster on IM workspace
                                       -- use "Buddy List" for Pidgin, but
                                       -- "Contact List" for Empathy
@@ -87,6 +89,7 @@ myUrgentWSRight = "}"
   as well.
 -}
 
+{-
 myWorkspaces =
   [
     "7:Chat",  "8:Dbg", "9:Pix",
@@ -96,6 +99,14 @@ myWorkspaces =
   ]
 
 startupWorkspace = "5:Dev"  -- which workspace do you want to be on after launch?
+-}
+
+myWorkspaces =
+  [
+    "1:One",  "2:Two", "3:Three"
+  ]
+
+startupWorkspace = "1:One"  -- which workspace do you want to be on after launch?
 
 {-
   Layout configuration. In this section we identify which xmonad
